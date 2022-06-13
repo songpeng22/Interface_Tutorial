@@ -8,6 +8,16 @@ import "oaidl.idl";
 import "ocidl.idl";
 
 [
+	object,
+	uuid(C1C9E3C7-C0EE-4084-B676-A05969A32ABF),
+	dual,
+	nonextensible,
+	helpstring("ICircle Interface"),
+	pointer_default(unique)
+]
+interface ICircle : IDispatch{
+};
+[
 	uuid(FD4F41B2-4DF7-4973-A298-4DF05D5A0757),
 	version(1.0),
 	helpstring("Shapes 1.0 Type Library")
@@ -15,4 +25,12 @@ import "ocidl.idl";
 library ShapesLib
 {
 	importlib("stdole2.tlb");
+	[
+		uuid(788D3BAE-0BCC-44B5-8B94-21606A3C9301),
+		helpstring("Circle Class")
+	]
+	coclass Circle
+	{
+		[default] interface ICircle;
+	};
 };

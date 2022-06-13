@@ -1,0 +1,26 @@
+HKCR
+{
+	Shapes.Circle.1 = s 'Circle Class'
+	{
+		CLSID = s '{788D3BAE-0BCC-44B5-8B94-21606A3C9301}'
+	}
+	Shapes.Circle = s 'Circle Class'
+	{
+		CLSID = s '{788D3BAE-0BCC-44B5-8B94-21606A3C9301}'
+		CurVer = s 'Shapes.Circle.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {788D3BAE-0BCC-44B5-8B94-21606A3C9301} = s 'Circle Class'
+		{
+			ProgID = s 'Shapes.Circle.1'
+			VersionIndependentProgID = s 'Shapes.Circle'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{FD4F41B2-4DF7-4973-A298-4DF05D5A0757}'
+		}
+	}
+}
