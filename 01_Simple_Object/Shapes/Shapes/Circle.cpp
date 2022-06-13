@@ -22,3 +22,12 @@ STDMETHODIMP CCircle::put_Radius(DOUBLE newVal)
 
     return S_OK;
 }
+
+STDMETHODIMP CCircle::GetArea(DOUBLE* Area)
+{
+    // TODO: Add your implementation code here
+    double dArea = 3.14 * m_dRadius * m_dRadius;
+    *Area = dArea;
+
+    return S_OK;
+}
