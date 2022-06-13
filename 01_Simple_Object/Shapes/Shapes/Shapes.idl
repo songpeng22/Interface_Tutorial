@@ -1,0 +1,18 @@
+// Shapes.idl : IDL source for Shapes
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Shapes.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(FD4F41B2-4DF7-4973-A298-4DF05D5A0757),
+	version(1.0),
+	helpstring("Shapes 1.0 Type Library")
+]
+library ShapesLib
+{
+	importlib("stdole2.tlb");
+};
