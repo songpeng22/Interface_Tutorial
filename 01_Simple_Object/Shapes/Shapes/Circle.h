@@ -47,6 +47,11 @@ END_COM_MAP()
 
 public:
 
+    STDMETHOD(get_Radius)(DOUBLE* pVal);
+    STDMETHOD(put_Radius)(DOUBLE newVal);
+
+private:
+    double m_dRadius;
 };
 
 OBJECT_ENTRY_AUTO(__uuidof(Circle), CCircle)
