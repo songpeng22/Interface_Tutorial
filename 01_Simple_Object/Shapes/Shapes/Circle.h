@@ -54,6 +54,7 @@ private:
     double m_dRadius;
 public:
     STDMETHOD(GetArea)(DOUBLE* Area);
+    STDMETHOD(Trace)(void);
 };
 
 OBJECT_ENTRY_AUTO(__uuidof(Circle), CCircle)

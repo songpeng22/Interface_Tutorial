@@ -19,6 +19,7 @@ interface ICircle : IDispatch{
     [propget, id(1), helpstring("property Radius")] HRESULT Radius([out, retval] DOUBLE* pVal);
     [propput, id(1), helpstring("property Radius")] HRESULT Radius([in] DOUBLE newVal);
     [id(2), helpstring("method GetArea")] HRESULT GetArea([out] DOUBLE* Area);
+    [id(3), helpstring("method Trace")] HRESULT Trace(void);
 };
 [
 	uuid(FD4F41B2-4DF7-4973-A298-4DF05D5A0757),

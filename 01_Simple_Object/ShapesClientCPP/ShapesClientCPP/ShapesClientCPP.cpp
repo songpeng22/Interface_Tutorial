@@ -20,7 +20,10 @@ int _tmain(int argc, _TCHAR* argv[])
         pCircle->AddRef();
         pCircle->put_Radius(3.0);
         double dArea;
+        //function
         pCircle->GetArea(&dArea);
+        //Trace
+        pCircle->Trace();
         std::cout << dArea << std::endl;
         getchar();
         pCircle->Release();
