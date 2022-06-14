@@ -1,0 +1,34 @@
+HKCR
+{
+	OSVersion.OSInfoControl.1 = s 'OSInfoControl Class'
+	{
+		CLSID = s '{65383DE2-1701-4262-BB93-AEE8D99D9AAF}'
+	}
+	OSVersion.OSInfoControl = s 'OSInfoControl Class'
+	{
+		CLSID = s '{65383DE2-1701-4262-BB93-AEE8D99D9AAF}'
+		CurVer = s 'OSVersion.OSInfoControl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {65383DE2-1701-4262-BB93-AEE8D99D9AAF} = s 'OSInfoControl Class'
+		{
+			ProgID = s 'OSVersion.OSInfoControl.1'
+			VersionIndependentProgID = s 'OSVersion.OSInfoControl'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			ForceRemove 'Control'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 102'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '%OLEMISC%'
+			}
+			'TypeLib' = s '{81994DD5-3ED0-4AEC-81BD-C87AF7B4391A}'
+			'Version' = s '1.0'
+		}
+	}
+}

@@ -1,0 +1,50 @@
+// OSVersion.idl : IDL source for OSVersion
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (OSVersion.tlb) and marshalling code.
+
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(0BE11606-F064-4490-96B0-04449CC5D93B),
+	dual,
+	nonextensible,
+	helpstring("IOSInfoControl Interface"),
+	pointer_default(unique)
+]
+interface IOSInfoControl : IDispatch{
+    [id(1), helpstring("method GetOSInfo")] HRESULT GetOSInfo([out] BSTR* strOSInfo);
+};
+
+[
+	uuid(81994DD5-3ED0-4AEC-81BD-C87AF7B4391A),
+	version(1.0),
+	helpstring("OSVersion 1.0 Type Library")
+]
+library OSVersionLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(F74FA9B1-7BB8-4E7E-9E0F-1B18B912A7D5),
+		helpstring("_IOSInfoControlEvents Interface")
+	]
+	dispinterface _IOSInfoControlEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(65383DE2-1701-4262-BB93-AEE8D99D9AAF),
+		control,
+		helpstring("OSInfoControl Class")
+	]
+	coclass OSInfoControl
+	{
+		[default] interface IOSInfoControl;
+		[default, source] dispinterface _IOSInfoControlEvents;
+	};
+};
